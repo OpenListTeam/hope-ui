@@ -9,4 +9,4 @@ export const baseMedia = {
   "reduce-motion": "(prefers-reduced-motion: reduce)",
   light: "(prefers-color-scheme: light)",
   dark: "(prefers-color-scheme: dark)",
-};
+} as const;

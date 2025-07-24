@@ -25,4 +25,4 @@ export const sizes = {
   containerLg: "1024px",
   containerXl: "1280px",
   container2xl: "1536px",
-};
+} as const;

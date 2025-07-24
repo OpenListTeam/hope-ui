@@ -1,29 +1,28 @@
-import { createStitches, defaultThemeMap } from "@stitches/core";
-
+import { createStitches } from "@stitches/core";
 import { baseMedia } from "./media";
-import { utils } from "./stitches-utils";
+import { baseUtils } from "./stitches-utils";
+import { baseThemeMap } from "./theme-map";
 import { baseThemeTokens } from "./tokens";
+import type Stitches from "@stitches/core/types/stitches";
 
-export const {
-  theme: baseTheme,
-  css,
-  globalCss,
-  config,
-  createTheme,
-  getCssText,
-  keyframes,
-} = createStitches({
+const stitches: Stitches<
+  "hope",
+  typeof baseMedia,
+  typeof baseThemeTokens,
+  typeof baseThemeMap,
+  typeof baseUtils
+> = createStitches({
   prefix: "hope",
-  themeMap: {
-    ...defaultThemeMap,
-    borderWidth: "sizes",
-    borderTopWidth: "sizes",
-    borderRightWidth: "sizes",
-    borderBottomWidth: "sizes",
-    borderLeftWidth: "sizes",
-    strokeWidth: "sizes",
-  },
+  themeMap: baseThemeMap,
   theme: baseThemeTokens,
   media: baseMedia,
-  utils,
-});
+  utils: baseUtils,
+}) as any;
+
+export const baseTheme: typeof stitches.theme = stitches.theme;
+export const css: typeof stitches.css = stitches.css;
+export const globalCss: typeof stitches.globalCss = stitches.globalCss;
+export const config: typeof stitches.config = stitches.config;
+export const createTheme: typeof stitches.createTheme = stitches.createTheme;
+export const getCssText: typeof stitches.getCssText = stitches.getCssText;
+export const keyframes: typeof stitches.keyframes = stitches.keyframes;

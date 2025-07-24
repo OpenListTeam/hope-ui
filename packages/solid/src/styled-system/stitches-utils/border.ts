@@ -16,4 +16,4 @@ export const border = {
     borderTop: value,
     borderBottom: value,
   }),
-};
+} as const;

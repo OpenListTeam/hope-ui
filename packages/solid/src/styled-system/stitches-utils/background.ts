@@ -10,4 +10,4 @@ export const background = {
    * The CSS `background-color` property
    */
   bgColor: (value: PropertyValue<"backgroundColor">) => ({ backgroundColor: value }),
-};
+} as const;

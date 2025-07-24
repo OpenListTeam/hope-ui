@@ -12,4 +12,4 @@ export const zIndices = {
   tooltip: 1600,
   skipLink: 1700,
   notification: 1800,
-};
+} as const;

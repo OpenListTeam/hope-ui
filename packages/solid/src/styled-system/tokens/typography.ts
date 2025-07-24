@@ -2,7 +2,7 @@ const fonts = {
   sans: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol","Noto Color Emoji"',
   serif: 'ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
   mono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
-};
+} as const;
 
 const fontSizes = {
   "2xs": "0.625rem",
@@ -19,7 +19,7 @@ const fontSizes = {
   "7xl": "4.5rem",
   "8xl": "6rem",
   "9xl": "8rem",
-};
+} as const;
 
 const fontWeights = {
   hairline: 100,
@@ -31,7 +31,7 @@ const fontWeights = {
   bold: 700,
   extrabold: 800,
   black: 900,
-};
+} as const;
 
 const lineHeights = {
   normal: "normal",
@@ -49,7 +49,7 @@ const lineHeights = {
   "8": "2rem",
   "9": "2.25rem",
   "10": "2.5rem",
-};
+} as const;
 
 const letterSpacings = {
   tighter: "-0.05em",
@@ -58,6 +58,6 @@ const letterSpacings = {
   wide: "0.025em",
   wider: "0.05em",
   widest: "0.1em",
-};
+} as const;
 
 export { fonts, fontSizes, fontWeights, letterSpacings, lineHeights };

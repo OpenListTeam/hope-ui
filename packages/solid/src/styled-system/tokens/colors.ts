@@ -16,7 +16,7 @@ const blackAlpha = {
   blackAlpha10: "#0000007a",
   blackAlpha11: "#00000090",
   blackAlpha12: "#000000e8",
-};
+} as const;
 
 // Radix - WhiteA
 const whiteAlpha = {
@@ -32,7 +32,7 @@ const whiteAlpha = {
   whiteAlpha10: "#ffffff72",
   whiteAlpha11: "#ffffff97",
   whiteAlpha12: "#ffffffeb",
-};
+} as const;
 
 export const commonColors = {
   // transparent: "transparent",
@@ -41,7 +41,7 @@ export const commonColors = {
   // white: "#ffffff",
   ...blackAlpha,
   ...whiteAlpha,
-};
+} as const;
 
 /* -------------------------------------------------------------------------------------------------
  * Light palette
@@ -61,7 +61,7 @@ const primary = {
   primary10: "#0894b3",
   primary11: "#0c7792",
   primary12: "#04313c",
-};
+} as const;
 
 // Radix - Violet
 const accent = {
@@ -77,7 +77,7 @@ const accent = {
   accent10: "#644fc1",
   accent11: "#5746af",
   accent12: "#20134b",
-};
+} as const;
 
 // Radix - Slate
 const neutral = {
@@ -93,7 +93,7 @@ const neutral = {
   neutral10: "#7e868c",
   neutral11: "#687076",
   neutral12: "#11181c",
-};
+} as const;
 
 // Radix - Green
 const success = {
@@ -109,7 +109,7 @@ const success = {
   success10: "#299764",
   success11: "#18794e",
   success12: "#153226",
-};
+} as const;
 
 // Radix - Blue
 const info = {
@@ -125,7 +125,7 @@ const info = {
   info10: "#0081f1",
   info11: "#006adc",
   info12: "#00254d",
-};
+} as const;
 
 // Radix - Amber
 const warning = {
@@ -141,7 +141,7 @@ const warning = {
   warning10: "#ffa01c",
   warning11: "#ad5700",
   warning12: "#4e2009",
-};
+} as const;
 
 // Radix - Red
 const danger = {
@@ -157,7 +157,7 @@ const danger = {
   danger10: "#dc3d43",
   danger11: "#cd2b31",
   danger12: "#381316",
-};
+} as const;
 
 const semanticColors = {
   loContrast: "white",
@@ -166,7 +166,7 @@ const semanticColors = {
   closeButtonHoverBackground: "$blackAlpha4",
   closeButtonActiveBackground: "$blackAlpha5",
   progressStripe: "$whiteAlpha6",
-};
+} as const;
 
 export const lightColors = {
   ...primary,
@@ -177,7 +177,7 @@ export const lightColors = {
   ...warning,
   ...danger,
   ...semanticColors,
-};
+} as const;
 
 /* -------------------------------------------------------------------------------------------------
  * Dark palette
@@ -197,7 +197,7 @@ const primaryDark = {
   primary10: "#00b1cc",
   primary11: "#00c2d7",
   primary12: "#e1f8fa",
-};
+} as const;
 
 // Radix - Violet dark
 const accentDark = {
@@ -213,7 +213,7 @@ const accentDark = {
   accent10: "#7c66dc",
   accent11: "#9e8cfc",
   accent12: "#f1eefe",
-};
+} as const;
 
 // Radix - Slate dark
 const neutralDark = {
@@ -229,7 +229,7 @@ const neutralDark = {
   neutral10: "#787f85",
   neutral11: "#9ba1a6",
   neutral12: "#ecedee",
-};
+} as const;
 
 // Radix - Green dark
 const successDark = {
@@ -245,7 +245,7 @@ const successDark = {
   success10: "#3cb179",
   success11: "#4cc38a",
   success12: "#e5fbeb",
-};
+} as const;
 
 // Radix - Blue dark
 const infoDark = {
@@ -261,7 +261,7 @@ const infoDark = {
   info10: "#369eff",
   info11: "#52a9ff",
   info12: "#eaf6ff",
-};
+} as const;
 
 // Radix - Amber dark
 const warningDark = {
@@ -277,7 +277,7 @@ const warningDark = {
   warning10: "#ffcb47",
   warning11: "#f1a10d",
   warning12: "#fef3dd",
-};
+} as const;
 
 // Radix - Red dark
 const dangerDark = {
@@ -293,7 +293,7 @@ const dangerDark = {
   danger10: "#f2555a",
   danger11: "#ff6369",
   danger12: "#feecee",
-};
+} as const;
 
 const semanticDarkColors = {
   loContrast: "$neutral1",
@@ -302,9 +302,9 @@ const semanticDarkColors = {
   closeButtonHoverBackground: "$whiteAlpha4",
   closeButtonActiveBackground: "$whiteAlpha5",
   progressStripe: "$blackAlpha6",
-};
+} as const;
 
-export const darkColors: typeof lightColors = {
+export const darkColors = {
   ...primaryDark,
   ...accentDark,
   ...neutralDark,
@@ -313,4 +313,4 @@ export const darkColors: typeof lightColors = {
   ...warningDark,
   ...dangerDark,
   ...semanticDarkColors,
-};
+} as const;

@@ -1,4 +1,4 @@
-import type { CSS } from "@stitches/core";
+import type { UtilsCSS as CSS } from "./type";
 
 function createGroupSelector(...selectors: string[]): string {
   return selectors
@@ -442,6 +442,4 @@ export const pseudoSelectors = {
   _light: (value: CSS) => ({
     ".hope-ui-light &": value,
   }),
-};
-
-export type PseudoSelector = typeof pseudoSelectors;
+} as const;

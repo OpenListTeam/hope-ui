@@ -9,7 +9,19 @@ import { zIndices } from "./z-indices";
 /**
  * Base stitches theme tokens - light mode
  */
-export const baseThemeTokens = {
+export const baseThemeTokens: {
+  colors: typeof commonColors & typeof lightColors;
+  space: typeof space;
+  sizes: typeof sizes;
+  fonts: typeof fonts;
+  fontSizes: typeof fontSizes;
+  fontWeights: typeof fontWeights;
+  letterSpacings: typeof letterSpacings;
+  lineHeights: typeof lineHeights;
+  radii: typeof radii;
+  shadows: typeof shadows;
+  zIndices: typeof zIndices;
+} = {
   colors: {
     ...commonColors,
     ...lightColors,
@@ -24,12 +36,15 @@ export const baseThemeTokens = {
   radii,
   shadows,
   zIndices,
-};
+} as const;
 
 /**
  * Base stitches theme tokens - dark mode
  */
-export const baseDarkThemeTokens = {
+export const baseDarkThemeTokens: {
+  colors: typeof darkColors;
+  shadows: typeof darkShadows;
+} = {
   colors: darkColors,
   shadows: darkShadows,
-};
+} as const;

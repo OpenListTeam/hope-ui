@@ -58,4 +58,4 @@ export const padding = {
    * The CSS `padding-top` and `padding-bottom` property
    */
   py: (value: PropertyValue<"paddingTop">) => ({ paddingTop: value, paddingBottom: value }),
-};
+} as const;

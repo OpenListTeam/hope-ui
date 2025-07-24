@@ -103,4 +103,4 @@ export const radii = {
     borderStartEndRadius: value,
     borderEndEndRadius: value,
   }),
-};
+} as const;

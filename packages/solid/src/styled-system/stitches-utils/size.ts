@@ -35,4 +35,4 @@ export const size = {
    * The CSS `width` and `height` property
    */
   boxSize: (value: PropertyValue<"width">) => ({ width: value, height: value }),
-};
+} as const;

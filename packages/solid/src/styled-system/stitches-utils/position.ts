@@ -5,4 +5,4 @@ export const position = {
    * The CSS `position` property
    */
   pos: (value: PropertyValue<"position">) => ({ position: value }),
-};
+} as const;

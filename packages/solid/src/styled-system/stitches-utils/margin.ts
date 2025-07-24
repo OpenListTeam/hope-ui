@@ -76,4 +76,4 @@ export const margin = {
       marginTop: value,
     },
   }),
-};
+} as const;

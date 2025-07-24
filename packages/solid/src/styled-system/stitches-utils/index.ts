@@ -9,17 +9,18 @@ import { radii } from "./radii";
 import { shadow } from "./shadow";
 import { size } from "./size";
 import { typography } from "./typography";
+import type { Utils } from "./type";
 
-export const utils = {
+export const baseUtils: Utils & typeof pseudoSelectors = {
   ...background,
   ...border,
   ...display,
   ...position,
-  ...pseudoSelectors,
   ...radii,
   ...margin,
   ...padding,
   ...shadow,
   ...size,
   ...typography,
-};
+  ...pseudoSelectors,
+} as const;

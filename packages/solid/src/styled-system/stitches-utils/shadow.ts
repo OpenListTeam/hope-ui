@@ -5,4 +5,4 @@ export const shadow = {
    * The CSS `box-shadow` property
    */
   shadow: (value: PropertyValue<"boxShadow">) => ({ boxShadow: value }),
-};
+} as const;

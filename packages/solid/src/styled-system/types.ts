@@ -1,21 +1,21 @@
-import { CSS, ScaleValue } from "@stitches/core";
+import type { CSS, ScaleValue } from "@stitches/core";
 
-import { BorderProps } from "./props/border";
-import { ColorProps } from "./props/color";
-import { CSSProp } from "./props/css";
-import { FlexboxProps } from "./props/flexbox";
-import { GridLayoutProps } from "./props/grid";
-import { LayoutProps } from "./props/layout";
-import { MarginProps } from "./props/margin";
-import { PaddingProps } from "./props/padding";
-import { PositionProps } from "./props/position";
-import { PseudoSelectorProps } from "./props/pseudo-selector";
-import { RadiiProps } from "./props/radii";
-import { ShadowProps } from "./props/shadow";
-import { SizeProps } from "./props/size";
-import { TypographyProps } from "./props/typography";
-import { baseTheme, config } from "./stitches.config";
-import { baseThemeTokens } from "./tokens";
+import type { BorderProps } from "./props/border";
+import type { ColorProps } from "./props/color";
+import type { CSSProp } from "./props/css";
+import type { FlexboxProps } from "./props/flexbox";
+import type { GridLayoutProps } from "./props/grid";
+import type { LayoutProps } from "./props/layout";
+import type { MarginProps } from "./props/margin";
+import type { PaddingProps } from "./props/padding";
+import type { PositionProps } from "./props/position";
+import type { PseudoSelectorProps } from "./props/pseudo-selector";
+import type { RadiiProps } from "./props/radii";
+import type { ShadowProps } from "./props/shadow";
+import type { SizeProps } from "./props/size";
+import type { TypographyProps } from "./props/typography";
+import type { baseTheme, config } from "./stitches.config";
+import type { baseThemeTokens } from "./tokens";
 
 /**
  * Hope UI - Stitches theme interface.

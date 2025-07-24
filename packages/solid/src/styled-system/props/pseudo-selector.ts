@@ -1,11 +1,11 @@
-import { PseudoSelector } from "../stitches-utils/pseudo-selector";
+import type { pseudoSelectors } from "../stitches-utils/pseudo-selector";
 import { KeysOf, SystemStyleObject } from "../types";
 
 /**
  * Types for common CSS pseudo selectors
  */
 export type PseudoSelectorProps = Partial<{
-  [k in keyof PseudoSelector]: SystemStyleObject;
+  [k in keyof typeof pseudoSelectors]: SystemStyleObject;
 }>;
 
 export const pseudoSelectorPropNames: KeysOf<PseudoSelectorProps> = {
