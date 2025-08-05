@@ -43,7 +43,7 @@ jobs:
         run: |
           pnpm config set @openlistteam:registry https://npm.pkg.github.com
           pnpm config set //npm.pkg.github.com/:_authToken $NODE_AUTH_TOKEN
-          pnpm publish
+          pnpm publish --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
