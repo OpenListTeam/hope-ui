@@ -3,7 +3,7 @@ name: Publish to GitHub npm registry
 on:
   push:
     tags:
-      - 'v*.*.*'
+      - "v*.*.*"
   workflow_dispatch:
 
 jobs:
@@ -18,8 +18,8 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          
+          node-version: "18"
+
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
@@ -49,4 +49,4 @@ jobs:
 
 permissions:
   packages: write
-  contents: read 
+  contents: read
