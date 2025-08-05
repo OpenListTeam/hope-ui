@@ -38,12 +38,17 @@ jobs:
         working-directory: ./packages/solid
         run: pnpm run build
 
-      - name: Publish to GitHub npm registry
+      - name: Create .npmrc for GitHub registry
         working-directory: ./packages/solid
         run: |
-          pnpm config set @openlistteam:registry https://npm.pkg.github.com
-          pnpm config set //npm.pkg.github.com/:_authToken $NODE_AUTH_TOKEN
-          pnpm publish --no-git-checks
+          echo "@openlistteam:registry=https://npm.pkg.github.com" > .npmrc
+          echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}" >> .npmrc
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish to GitHub npm registry
+        working-directory: ./packages/solid
+        run: pnpm publish --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
