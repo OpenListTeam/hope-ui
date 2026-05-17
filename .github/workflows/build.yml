@@ -58,9 +58,11 @@ jobs:
 
       - name: Collect release files
         run: |
-          cp packages/solid/package.json /tmp/dist/
-          cp packages/solid/README.md /tmp/dist/ 2>/dev/null || true
-          cp LICENSE.md /tmp/dist/ 2>/dev/null || true
+          mkdir -p /tmp/release/dist
+          cp -r /tmp/dist/* /tmp/release/dist/
+          cp packages/solid/package.json /tmp/release/
+          cp packages/solid/README.md /tmp/release/ 2>/dev/null || true
+          cp LICENSE.md /tmp/release/ 2>/dev/null || true
 
       - name: Checkout dist branch
         run: |
@@ -74,7 +76,7 @@ jobs:
       - name: Update files
         run: |
           git rm -rf . || true
-          cp -r /tmp/dist/* .
+          cp -r /tmp/release/* .
 
       - name: Commit and push
         run: |
