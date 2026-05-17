@@ -21,6 +21,18 @@ yarn add github:OpenListTeam/hope-ui#dist @stitches/core solid-transition-group
 pnpm add github:OpenListTeam/hope-ui#dist @stitches/core solid-transition-group
 ```
 
+tsconfig.json
+
+```json
+{
+  "compilerOptions": {
+    "paths": {
+      "@stitches/core/types/*": ["./node_modules/@stitches/core/types/*"]
+    }
+  }
+}
+```
+
 ## License
 
 This project is licensed under the MIT License.
