@@ -8,15 +8,17 @@ For full documentation, visit [hope-ui.com](https://hope-ui.com/).
 
 ## Installation
 
+This package is not published to npm. Install directly from the `dist` branch:
+
 ```sh
 # With npm
-npm install @hope-ui/solid @stitches/core solid-transition-group
+npm install github:OpenListTeam/hope-ui#dist @stitches/core solid-transition-group
 
 # With yarn
-yarn add @hope-ui/solid @stitches/core solid-transition-group
+yarn add github:OpenListTeam/hope-ui#dist @stitches/core solid-transition-group
 
 # With pnpm
-pnpm add @hope-ui/solid @stitches/core solid-transition-group
+pnpm add github:OpenListTeam/hope-ui#dist @stitches/core solid-transition-group
 ```
 
 ## License

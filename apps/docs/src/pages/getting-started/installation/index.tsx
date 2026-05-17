@@ -36,7 +36,8 @@ export default function Installation() {
       </Alert>
       <SectionTitle id="installation">Installation</SectionTitle>
       <Text mb="$5">
-        Inside your SolidJS project, install Hope UI by running either of the following:
+        Inside your SolidJS project, install Hope UI from the Git repository by running either of
+        the following:
       </Text>
       <CodeSnippet lang="bash" snippet={snippets.npmInstall} mb="$3" />
       <CodeSnippet lang="bash" snippet={snippets.yarnAdd} mb="$3" />

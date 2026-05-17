@@ -47,7 +47,7 @@ export default function Header() {
     <Box
       as="header"
       position="sticky"
-      top="20px"
+      top="0"
       left="0"
       right="0"
       zIndex="$sticky"
@@ -79,13 +79,16 @@ export default function Header() {
               </hope.span>
             </Text>
             <Tag size="sm" rounded="$sm" fontWeight="$semibold">
-              v0.6.7
+              v{__HOPE_UI_VERSION__}
             </Tag>
+            <Text fontSize="$sm" color="$neutral11">
+              for OpenList
+            </Text>
           </HStack>
           <HStack spacing="$2">
             <IconButton
               as="a"
-              href="https://github.com/fabien-ml/hope-ui"
+              href="https://github.com/OpenListTeam/hope-ui"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Go to the github repository"

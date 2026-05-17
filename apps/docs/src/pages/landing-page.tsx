@@ -1,12 +1,16 @@
 import {
+  Alert,
+  AlertDescription,
+  AlertIcon,
+  AlertTitle,
   Anchor,
   Box,
   Button,
   Center,
+  CloseButton,
   Container,
   GridItem,
   Heading,
-  HStack,
   HTMLHopeProps,
   SimpleGrid,
   Stack,
@@ -74,7 +78,7 @@ function HeroSection(props: VStackProps) {
           as="a"
           target="_blank"
           rel="noopenner noreferrer"
-          href="https://github.com/fabien-ml/hope-ui"
+          href="https://github.com/OpenListTeam/hope-ui"
           variant="subtle"
           colorScheme="neutral"
           size="xl"
@@ -301,26 +305,33 @@ function FeatureSection(props: HTMLHopeProps<"div">) {
 }
 
 export default function LandingPage() {
+  let alertRef!: HTMLDivElement;
   return (
     <VStack alignItems="stretch">
-      <Portal>
-        <Box position="fixed" top="0" left="0" right="0" zIndex="$banner">
-          <HStack
-            bg="$danger9"
-            color="white"
-            px="$2"
-            fontWeight="$medium"
-            fontSize="$sm"
-            lineHeight="$5"
-            _dark={{
-              bg: "$danger3",
-              color: "$danger11",
+      <Box ref={alertRef}>
+        <Alert status="danger">
+          <AlertIcon mr="$2_5" />
+          <AlertTitle mr="$2_5">
+            {" "}
+            This is a fork of Hope UI by{" "}
+            <Anchor href="https://github.com/OpenListTeam">
+              The OpenList Projects Contributors
+            </Anchor>
+            .
+          </AlertTitle>
+          <AlertDescription>
+            The original repository is archived and no longer maintained.
+          </AlertDescription>
+          <CloseButton
+            position="absolute"
+            right="8px"
+            top="8px"
+            onClick={() => {
+              alertRef?.remove();
             }}
-          >
-            Hope UI is no longer maintained. Focus is on the developement of it's successor: <a href="https://github.com/kobaltedev/pigment">Pigment</a>.
-          </HStack>
-        </Box>
-      </Portal>
+          />
+        </Alert>
+      </Box>
       <Header />
       <HeroSection />
       <FeatureSection />

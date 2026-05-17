@@ -51,8 +51,12 @@ jobs:
 
       - name: build documentation
         working-directory: ./apps/docs
+        env:
+          DOCS_BASE_URL: /hope-ui/
         run: |
           pnpm build
+          cp dist/index.html dist/404.html
+          touch dist/.nojekyll
 
       - name: Setup Pages
         uses: actions/configure-pages@v6

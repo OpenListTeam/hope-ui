@@ -1,6 +1,7 @@
-const npmInstall = "npm install @hope-ui/solid @stitches/core solid-transition-group";
-const yarnAdd = "yarn add @hope-ui/solid @stitches/core solid-transition-group";
-const pnpmAdd = "pnpm add @hope-ui/solid @stitches/core solid-transition-group";
+const npmInstall =
+  "npm install github:OpenListTeam/hope-ui#dist @stitches/core solid-transition-group";
+const yarnAdd = "yarn add github:OpenListTeam/hope-ui#dist @stitches/core solid-transition-group";
+const pnpmAdd = "pnpm add github:OpenListTeam/hope-ui#dist @stitches/core solid-transition-group";
 
 const providerSetup = `// 1. import \`HopeProvider\` component
 import { HopeProvider } from '@hope-ui/solid'

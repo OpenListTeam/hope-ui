@@ -1,11 +1,9 @@
 import {
-  Anchor,
   Box,
   Center,
   Container,
   Flex,
   hope,
-  HStack,
   Progress,
   ProgressIndicator,
   Spinner,
@@ -98,20 +96,6 @@ function AppLayout() {
           <Progress indeterminate size="xs" d={isRouting() ? "block" : "none"}>
             <ProgressIndicator />
           </Progress>
-          <HStack
-            bg="$danger9"
-            color="white"
-            px="$2"
-            fontWeight="$medium"
-            fontSize="$sm"
-            lineHeight="$5"
-            _dark={{
-              bg: "$danger3",
-              color: "$danger11",
-            }}
-          >
-            Hope UI is no longer maintained. Focus is on the developement of it's successor: <a href="https://github.com/kobaltedev/pigment">Pigment</a>.
-          </HStack>
         </Box>
       </Portal>
       <Header />

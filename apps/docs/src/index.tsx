@@ -32,9 +32,12 @@ const config: HopeThemeConfig = {
   },
 };
 
+// "./" → "" (root), "/hope-ui/" → "/hope-ui"
+const routerBase = import.meta.env.BASE_URL.replace(/^\./, "").replace(/\/$/, "");
+
 render(
   () => (
-    <Router>
+    <Router base={routerBase}>
       <HopeProvider config={config}>
         <NotificationsProvider>
           <App />

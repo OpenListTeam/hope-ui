@@ -740,7 +740,7 @@ export default function SelectDoc() {
         <AlertDescription>
           If you want to build your own abstraction you can look at the{" "}
           <Anchor
-            href="https://github.com/fabien-ml/hope-ui/tree/main/src/components/simple-select"
+            href="https://github.com/OpenListTeam/hope-ui/tree/main/src/components/simple-select"
             external
             color="$primary11"
             fontWeight="$semibold"
