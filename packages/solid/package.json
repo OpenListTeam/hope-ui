@@ -12,17 +12,20 @@
     "system",
     "components"
   ],
-  "homepage": "https://hope-ui.com",
+  "homepage": "https://openlistteam.github.io/hope-ui",
   "bugs": {
-    "url": "https://github.com/fabien-ml/hope-ui/issues"
+    "url": "https://github.com/OpenListTeam/hope-ui/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fabien-ml/hope-ui.git",
-    "directory": "packages/design-system"
+    "url": "git+https://github.com/OpenListTeam/hope-ui.git",
+    "directory": "packages/solid"
   },
   "license": "MIT",
-  "author": "Fabien MARIE-LOUISE (https://github.com/fabien-ml)",
+  "author": {
+    "name": "The OpenList Projects Contributors",
+    "url": "https://github.com/OpenListTeam"
+  },
   "sideEffects": false,
   "exports": {
     ".": {

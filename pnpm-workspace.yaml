@@ -1,3 +1,9 @@
 packages:
   - apps/*
   - packages/*
+allowBuilds:
+  core-js: true
+  core-js-pure: true
+  esbuild: true
+  fsevents: true
+  turbo: true
